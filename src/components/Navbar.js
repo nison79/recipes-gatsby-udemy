@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'gatsby'
 import { FaAlignJustify } from 'react-icons/fa'
 import Logo  from '../assets/images/logo.svg'
 
 const Navbar = () => {
+  const [show,setShow] = useState(false)
   return (
     <nav className="navbar">
       <div className="nav-center">
@@ -12,12 +13,31 @@ const Navbar = () => {
             <img src={Logo} alt="recipes logo"/>
           </Link>
           <button className="nav-btn">
-            <FaAlignJustify  />
+            <FaAlignJustify onClick={() => setShow(!show)}  />
           </button>
         </div>
-        <div className="nav-links show-links">
-          <Link to="/" className="nav-link" activeClassName="active-link">Home</Link>
-          <Link to="/" className="nav-link" activeClassName="active-link">Home</Link>
+        <div className={ show  ? "nav-links show-links" : "nav-links"}>
+          <Link to="/" className="nav-link" activeClassName="active-link"
+          onClick={() => setShow(false)}>
+            Home
+          </Link>
+          <Link to="/recipes" className="nav-link" activeClassName="active-link"
+          onClick={() => setShow(false)}>
+            Recipes
+          </Link>
+          <Link to="/tags" className="nav-link" activeClassName="active-link"
+          onClick={() => setShow(false)}>
+            Tags
+          </Link>
+          <Link to="/about" className="nav-link" activeClassName="active-link"
+          onClick={() => setShow(false)}>
+            About
+          </Link>
+          <div className="nav-link contact-link">
+            <Link to ="/contact" className="btn" onClick={() => setShow(false)}>
+              Contact
+            </Link>
+          </div>
         </div>
       </div>
     </nav>
