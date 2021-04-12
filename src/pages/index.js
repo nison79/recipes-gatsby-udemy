@@ -10,7 +10,7 @@ import AllRecipes from '../components/AllRecipes'
 export default function Home() {
   return (
     <Layout>
-      <Seo />
+      <Seo title="Home Page" description="the start of the journey" />
       <main className="page">
         <header className="hero">
           <StaticImage 
