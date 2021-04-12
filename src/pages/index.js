@@ -1,6 +1,7 @@
 import React from "react"
 import { StaticImage } from 'gatsby-plugin-image'
 import Layout from '../components/Layout'
+import Seo from '../components/Seo'
 
 import AllRecipes from '../components/AllRecipes'
 
@@ -9,6 +10,7 @@ import AllRecipes from '../components/AllRecipes'
 export default function Home() {
   return (
     <Layout>
+      <Seo />
       <main className="page">
         <header className="hero">
           <StaticImage 

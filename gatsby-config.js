@@ -27,7 +27,6 @@ module.exports = {
         name: "John",
         age: "56"
       },
-
     ]
   },
   plugins: [
@@ -39,6 +38,7 @@ module.exports = {
         }
       }
     },
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
