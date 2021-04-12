@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from '../components/Layout'
 import { graphql, Link } from 'gatsby'
 import setupTags from '../utils/setupTags'
+import slugify from 'slugify'
 
 const Tags = ({data}) => {
   const newTags = setupTags(data.allContentfulRecipe.nodes)
@@ -13,7 +14,10 @@ const Tags = ({data}) => {
         <section class="tags-page">
           {newTags.map((tag,index) => {
             const [text,value] =tag
-            return <Link to={`/${text}`} key={index} className="tag">
+            const slug = slugify(text , {lower:true})
+
+            
+            return <Link to={`/tags/${slug}`} key={index} className="tag">
               <h5>{text}</h5>
               <p>{value}</p>
                 </Link>

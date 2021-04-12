@@ -32,6 +32,14 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Poppins', 'Lato']
+        }
+      }
+    },
+    {
       resolve: `gatsby-plugin-styled-components`,
       options: {
         // Add any options here

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400|Inconsolata:400");
+
 *,
 ::after,
 ::before {
@@ -54,8 +54,8 @@
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
   /* typography */
   --defaultFontSize: 87.5%;
-  --headingFont: "Inconsolata", monospace;
-  --bodyFont: "Montserrat", sans-serif;
+  --headingFont: "Poppins", monospace;
+  --bodyFont: "Lato", sans-serif;
   --smallText: 0.8em;
   --extraSmallText: 0.7em;
   /* rest */
