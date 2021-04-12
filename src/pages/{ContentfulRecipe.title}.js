@@ -63,10 +63,7 @@ const RecipeTemplate = ({ data }) => {
                   return (
                       <Link to={`/${tag}`} key={index}>
                       {tag}
-
                       </Link>
-                      
-                  
                   )
                 })}
               </p>
